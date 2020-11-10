@@ -1,0 +1,42 @@
+@import 'settings/variable';
+//@import 'settings/_extends_color';
+@import 'settings/_mixin_responsive';
+//@import 'settings/_mixin_grid';
+//
+@import 'element/icon';
+@import 'element/btn';
+@import 'element/team';
+@import 'element/select';
+@import 'element/preloader';
+
+//
+@import 'component/nav';
+@import 'component/slider';
+@import 'component/block';
+@import 'component/schedule';
+@import 'component/caption';
+@import 'component/table';
+//@import 'component/table_games';
+//
+@import 'sprite/aspect';
+//
+@import 'layout/header';
+@import 'layout/leagues';
+@import 'layout/main';
+@import 'layout/calendar';
+@import 'layout/lastgames';
+@import 'layout/stat';
+@import 'layout/footer';
+//
+
+.game--postponed {
+  text-decoration: line-through;
+}
+
+.game--show {
+  display: table-row;
+}
+
+.game--hide {
+  display: none;
+}

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  @@include('global/head.html')
+</head>
+<body>
+  @@include('block/header.html')
+  @@include('block/leagues.html')
+
+  <main class="main" id="main">
+    <section class="main__item main__item--calendar block block--default calendar block--preloader" id="calendar">
+      @@include('block/calendar.html')
+      @@include('block/schedule.html')
+      @@include('element/preloader.html', {
+      "add__class": "preloader--calendar"
+      })
+    </section>
+
+    <section class="main__item main__item--h2h block block--default block--table block--preloader" id="h2h">
+      @@include('block/h2h__title.html')
+      @@include('block/h2h__caption.html')
+      @@include('block/h2h__content.html')
+      @@include('element/preloader.html', {
+      "add__class": "preloader--h2h"
+      })
+    </section>
+
+    <section class="main__item main__item--referee block block--default block--table block--sub block--preloader" id="referee">
+      @@include('block/referee.html')
+      @@include('element/preloader.html')
+    </section>
+
+    <section class="main__item main__item--default block block--default lastgames" id="lastgames">
+      @@include('block/lastgames__title.html')
+      @@include('block/lastgames__caption.html')
+      @@include('block/lastgames__content--home.html')
+<!--      @@include('block/lastgames__content&#45;&#45;home.html')-->
+    </section>
+
+    <section class="main__item main__item--default block block--default block--table stat stat--soccer block--preloader" id="stat">
+      @@include('block/stat__title.html')
+      @@include('block/stat__caption.html')
+      @@include('block/stat__content.html')
+      @@include('element/preloader.html', {
+      "add__class": "preloader--stat"
+      })
+    </section>
+
+    <section class="main__item main__item--default block block--default" id="seassons">
+      @@include('block/seassons__title.html')
+      @@include('block/seassons__caption.html')
+      @@include('block/seassons__content.html')
+    </section>
+  </main>
+
+  @@include('global/footer.html')
+  @@include('global/scripts.html')
+
+  <!-- todo: delete -->
+  @@include('global/development.html')
+</body>
+</html>

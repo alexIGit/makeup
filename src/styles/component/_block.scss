@@ -1,0 +1,75 @@
+.block {
+  $block_clr--bg: $clr__prim;
+  $block_clr--text: $clr__active;
+  $block_ff: $font_family--prim;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  &--default {
+    font-family: $block_ff;
+    color: $clr__prim;
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  &--preloader {
+    position: relative;
+  }
+
+  &--sub {
+    border: $border--thick;
+  }
+
+  &--table {
+    position: relative;
+  }
+
+  &__title {
+    border-radius: 10px;
+
+    &--default {
+      background-color: $block_clr--bg;
+      color: $block_clr--text;
+      text-align: center;
+      height: 50px;
+      margin: 0;
+      padding: 0;
+      line-height: 50px;
+    }
+
+    &--sub {
+      margin: 0.5em;
+      height: 35px;
+      line-height: 35px;
+      font-size: 1.2em;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  &__content_stat {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    @include tablet--lte {
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+  }
+
+  &__link {
+    color: inherit;
+
+    &--default {
+      color: $block_clr--bg;
+    }
+  }
+}

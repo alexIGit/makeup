@@ -1,0 +1,14 @@
+@import 'settings/variable';
+@import 'element/tooltip';
+
+.border {
+  &__thick {
+    &--left {border-left: $border--thick;}
+    &--right {border-right: $border--thick;}
+  }
+
+  &__thin {
+    &--left {border-left: $border--thin;}
+    &--right {border-right: $border--thin;}
+  }
+}

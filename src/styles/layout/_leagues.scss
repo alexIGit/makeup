@@ -1,0 +1,15 @@
+.leagues {
+  $leagues_clr__bg: $clr__prim;
+  $leagues_menu__height: $main_nav__heght;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+
+  &--default {
+    max-width: 100%;
+    height: $leagues_menu__height;
+    //margin-top: ;
+    border: 4px solid $leagues_clr__bg;
+    border-radius: 10px;
+  }
+}

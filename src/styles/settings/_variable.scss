@@ -1,0 +1,71 @@
+/*
+ *  Fonts
+ */
+//$font_family--prim: 'Roboto Condensed', 'helvetica', 'arial', sans-serif;
+//$font_family--prim: 'Vollkorn', serif;
+
+$font_family--prim: 'Philosopher';
+
+//$ff-thead: 'Open Sans', sans-serif;
+
+/*
+ *  responsive
+ */
+$mobile-small:	320px;
+$mobile-large:	480px;
+$tablet-small:	576px;
+$tablet-large:	768px;
+//$tablet-large:	796px;
+//$screen-small:	1024px;
+$screen-small:	1024px;
+$screen-large:	1280px;
+
+/*
+ *  Colors
+ */
+$hue: 212;
+$sat: 75%;
+$lig: 31%;
+
+$clr__prim: hsla($hue, $sat, $lig, 1);
+$clr__prim_text: hsla($hue, 100%, 100%, 1);
+$clr__prim--hover: hsla($hue, $sat, $lig, 0.3);
+$clr__prim--hover_btn: hsla($hue, 50%, 50%, 1);
+$clr__prim--light: lighten($clr__prim, 10%);
+$clr__prim--dark: lighten($clr__prim, 50%);
+$clr__tooltipe: hsla($hue, 50%, 50%, 1);
+$clr__red_card: hsla(0, 95%, 50%, 1);
+
+//$clr__table__col: hsla(222, 56%, 63%, 0.3);
+$clr__table__col: $clr__prim--hover;
+
+$clr__active: white;
+
+$clr__text--negative: white;
+$clr--negative: white;
+
+//$clr--done: $clr__prim--light;
+$clr--done: $clr__prim;
+
+/*
+ *  Z-index
+ */
+
+$z--main: 1;
+$z--aside: 10;
+$z--popup: 200;
+$z--preload: 100;
+
+/*
+ * sizes
+ */
+$grid_row_height: 75px;
+// main
+$main_nav__heght: $grid_row_height;
+
+/*
+ * Decore
+ */
+$border--thick: 3px solid $clr__prim;
+$border--thin: 2px dashed $clr__prim;
+$box-shadow--prim: 3px 0 3px hsla(212, 30%, 30%, 0.8);

@@ -1,0 +1,205 @@
+.table {
+  // для адаптивности находится внутри блока .block--table
+  $tbl_clr_prim: $clr__prim;
+  $tbl_clr_invert: $clr__active;
+  $tbl_clr_arrow: $tbl_clr_invert;
+  $tbl_clr_teams: white;
+  $tbl_clr_col: $clr__table__col;
+  $table_font_size: 0.85em;
+  $table_h_tr: 25px; // не меньше высоты иконки команды == 25px
+  $table_h_note: 15px;
+  $table_w_teams: 65px;
+  @mixin table_response {
+    margin-left: $table_w_teams;
+    padding-bottom: $table_h_note;
+  }
+  @mixin table_response_teams {
+    position: absolute;
+    left: 0;
+    height: $table_h_tr;
+    width: $table_w_teams;
+    background-color: $tbl_clr_teams;
+    box-shadow: $box-shadow--prim;
+  }
+  @mixin table_response_note {
+    position: absolute;
+    bottom: 0;
+    height: $table_h_note;
+  }
+  //
+  font-size: $table_font_size;
+
+  &--default {
+    color: $tbl_clr_prim;
+    text-align: center;
+    width: 100%;
+  }
+
+  &--games {
+    border-collapse: collapse;
+    @include response-table_games {
+      @include table_response;
+    }
+    @include tablet--lte {
+      @include table_response;
+    }
+
+    & .table__col:nth-of-type(2n + 6) { // вертикальное выделение колонок
+      background-color: $tbl_clr_col;
+    }
+  }
+
+  &--referee {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    min-height: 130px;
+  }
+
+  &--stat {
+    border-collapse: collapse;
+    //table-layout: fixed;
+    //@include tablet--lte {
+    //  @include table_response;
+    //}
+  }
+
+  &__tr {
+
+    &:hover {
+      background-color: $tbl_clr_col;
+    }
+
+    &--games {
+      height: $table_h_tr;
+      line-height: $table_h_tr;
+    }
+
+    &--stat {
+      //background-color: blue;
+
+      &:nth-of-type(2n) {
+        background-color: $tbl_clr_col;
+      }
+    }
+  }
+
+  &__col {
+
+    &--league {
+      width: 25px;
+    }
+
+    &--note {
+      width: 5px;
+    }
+
+    &--date {
+      min-width: 15px;
+    }
+
+    &--teams {
+      position: static;
+      min-width: $table_w_teams; // min-with чтобы иконки были на одном уровне
+      @include response-table_games {
+        @include table_response_teams;
+      }
+      @include tablet--lte {
+        @include table_response_teams;
+      }
+    }
+
+    &--teams_stat {
+      position: static;
+      //min-width: auto;
+      //@include tablet--lte {
+      //  min-width: $table_w_teams;
+      // min-with чтобы иконки были на одном уровне
+      //  @include table_response_teams;
+      //}
+    }
+
+    &--adapt {
+      position: static;
+      @include response-table_games {
+        @include table_response_teams;
+        //bottom: 0;
+        //background-color: lightgreen;
+      }
+      @include tablet--lte {
+        @include table_response_teams;
+        //bottom: 0;
+        //background-color: lightgreen;
+      }
+    }
+
+    &--result {
+      min-width: 45px;
+    }
+
+    &--extended {
+      min-width: 70px;
+    }
+
+    &--arbiter {
+      min-width: 75px;
+    }
+
+    &--time {
+      min-width: 40px;
+    }
+
+    &--seasson {
+      min-width: 49px;
+    }
+
+    &--right {
+      text-align: right;
+    }
+
+    &--it {
+      width: 75px;
+      background-color: deeppink;
+    }
+  }
+
+  &__col_group {
+    background-color: inherit; // for lint
+
+    &--stat {
+      width: auto;
+    }
+
+    &--games {
+      width: 50px;
+    }
+
+    &--teams {
+      width: 135px;
+    }
+  }
+
+  &__note {
+    display: none;
+    color: $clr__prim;
+    text-align: center;
+    width: 100%;
+    font-size: $table_font_size;
+    position: static;
+    background-color: darkcyan;
+    @include response-table_games {
+      @include table_response_note;
+      background-color: pink;
+    }
+    @include tablet--lte {
+      @include table_response_note;
+      background-color: red;
+    }
+  }
+
+  &__dash {
+    vertical-align: super; // не знаю почему так, но подходит
+    line-height: 25px;
+    margin: -3px;
+  }
+}

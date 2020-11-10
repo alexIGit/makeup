@@ -1,0 +1,96 @@
+.select {
+  $select_clr: $clr__prim;
+  $select_clr_text: $clr__active;
+  $select_clr_hover: $clr__prim--hover_btn;
+  $select_h: 20px;
+  $select_h--lastgames: 30px;
+  $select_h--count: 15px;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  //width: auto;
+  //align-self: center;
+  color: $select_clr_text;
+  border-radius: 10px;
+  box-sizing: border-box;
+  //text-transform: ;
+
+  &--default {
+    height: $select_h;
+
+    & > .select__label {
+      line-height: $select_h;
+    }
+  }
+
+  &--count {
+    height: $select_h--count;
+
+    & > .select__label {
+      line-height: $select_h--count;
+    }
+  }
+
+  &__inp {
+    display: none;
+
+    &:checked + .select__label {
+      color: $select_clr;
+      background-color: $select_clr_text;
+    }
+  }
+
+  &__label {
+    height: 100%;
+    flex-grow: 1;
+    color: inherit;
+    text-align: center;
+    display: inline-block;
+    //line-height: $select_h--count;
+    //line-height: 100%;
+    align-self: center;
+    border: 1px solid  $select_clr;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition:
+      color 0.15s ease-in-out,
+      background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+    background-color: $select_clr;
+    cursor: pointer;
+
+    &:not(:first-of-type) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &:not(:last-of-type) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:hover {
+      background-color: $select_clr_hover;
+    }
+  }
+
+  &--leagues {
+    background-color: $clr__active;
+    color: $clr__prim;
+    border: 2px solid $clr__prim;
+    border-radius: 5px;
+  }
+
+  &--lastgames {
+    height: $select_h--lastgames;
+    text-align: center;
+    line-height: $select_h--lastgames;
+    // чудо юдо
+
+    & > .select__label {
+      padding: 0;
+    }
+  }
+}

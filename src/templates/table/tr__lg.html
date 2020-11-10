@@ -1,0 +1,75 @@
+<tr data-table-select="home"  data-table-count="5" data-time-marker="first/second/ot"
+    class="table__tr table__tr--games">
+    <td class="table__col table__col--league">
+        <span class="icon icon--table">
+            <img src="../img/icon/s_apl.svg" alt="APL" title="APL">
+        </span>
+    </td>
+    <td class="table__col table__col--note">!</td>
+    <td class="table__col table__col--date">22.05.2018</td>
+    <td class="table__col table__col--teams">
+        @@include('../element/team.html', {
+        "team": {
+        "class": "team--logo team--red",
+        "class__red": "team__red--show team__red--before",
+        "logo": "@@awaylogo",
+        "name": "@@home"
+        }
+        })
+        <span class="table__dash">-</span>
+        @@include('../element/team.html', {
+        "team": {
+        "class": "team--logo team--red",
+        "class__red": "team__red--show team__red--after",
+        "logo": "@@awaylogo",
+        "name": "@@away"
+        }
+        })
+    </td>
+    <td class="table__col table__col--result">
+        <span data-res>6</span>
+        <span data-res>-</span>
+        <span data-res>6</span>
+    </td>
+    <td class="table__col table__col--result">
+        <span data-res>16</span>
+        <span data-res>-</span>
+        <span data-res>16</span>
+    </td>
+    <td class="table__col table__col--result">
+        <span data-res>36</span>
+        <span data-res>-</span>
+        <span data-res>63</span>
+    </td>
+
+    <td class="table__col table__col--result">
+        <span data-res>6</span>
+        <span data-res>-</span>
+        <span data-res>6</span>
+    </td>
+    <td class="table__col table__col--result">
+        <span data-res>16</span>
+        <span data-res>-</span>
+        <span data-res>16</span>
+    </td>
+    <td class="table__col table__col--result">
+        <span data-res>36</span>
+        <span data-res>-</span>
+        <span data-res>63</span>
+    </td>
+    <td class="table__col table__col--result">
+        <span data-res>6</span>
+        <span data-res>-</span>
+        <span data-res>6</span>
+    </td>
+    <td class="table__col table__col--result">
+        <span data-res>16</span>
+        <span data-res>-</span>
+        <span data-res>16</span>
+    </td>
+    <td class="table__col table__col--result">
+        <span data-res>36</span>
+        <span data-res>-</span>
+        <span data-res>63</span>
+    </td>
+</tr>

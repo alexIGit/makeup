@@ -1,0 +1,13 @@
+%aspect {
+  max-width: 25px;
+  max-height: 25px;
+}
+
+.aspect {
+  min-width: 25px;
+  min-height: 25px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  //background-color: darkseagreen;
+  background-image: url('aspect.png');
+}

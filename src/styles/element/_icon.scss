@@ -1,0 +1,19 @@
+.icon {
+  width: 100%; //
+
+  &--schedule {
+    width: 25px;
+    height: 25px;
+  }
+
+  &--table {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

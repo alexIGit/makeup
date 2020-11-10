@@ -1,0 +1,25 @@
+<h1 class="block__title block__title--default lastgames__title">Последние игры</h1>
+
+<section class="lastgames__count select select--count">
+    <!-- последовательность: сначала input потом label -->
+    <input type="radio" name="lastgames__count" id="lastgames__count--5" value="5" class="select__inp" >
+    <label for="lastgames__count--5" class="select__label">5</label>
+
+    <input type="radio" name="lastgames__count" id="lastgames__count--10" value="10" class="select__inp">
+    <label for="lastgames__count--10" class="select__label">10</label>
+
+    <input type="radio" name="lastgames__count" id="lastgames__count--15" value="15" class="select__inp" checked>
+    <label for="lastgames__count--15" class="select__label">15</label>
+
+    <!--    -->
+    <input type="radio" name="lastgames__count" id="lastgames__count--20" value="20" class="select__inp">
+    <label for="lastgames__count--20" class="select__label">20</label>
+
+    <input type="radio" name="lastgames__count" id="lastgames__count--all" value="1000" class="select__inp">
+    <label for="lastgames__count--all" class="select__label">Все</label>
+</section>
+
+@@include('../element/select__times.html', {
+"name": "lg_times",
+"add_class": "lastgames__times select--count"
+})

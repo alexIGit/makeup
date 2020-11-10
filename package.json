@@ -1,0 +1,55 @@
+{
+  "name": "makeup_sport_statistic",
+  "version": "10.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "styles:lint": "stylelint 'src/**/_*.scss' --syntax scss",
+    "styles:fix": "stylelint 'src/**/_*.scss' --syntax scss --fix",
+    "scripts:lint": "eslint 'src/scripts/*.js'",
+    "scripts:fix": "eslint 'src/scripts/*.js' --fix",
+    "styles:lint:one": "stylelint 'src/**/*var*.scss' --syntax scss | grep xpecte"
+  },
+  "author": "ag",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "es6-shim": "^0.35.5",
+    "eslint": "^6.7.2",
+    "gulp": "^4.0.2",
+    "gulp-css-url-adjuster": "^0.2.3",
+    "gulp-css-validator": "0.0.4",
+    "gulp-eslint": "^6.0.0",
+    "gulp-file-include": "^2.1.1",
+    "gulp-htmlhint": "^3.0.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-jscpd": "0.0.8",
+    "gulp-load-plugins": "^2.0.1",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-stylelint": "^11.0.0",
+    "gulp.spritesmith": "^6.11.0",
+    "jasmine-core": "^3.5.0",
+    "jsdom": "^15.2.1",
+    "npm": "^6.13.4",
+    "stream-combiner2": "^1.1.1",
+    "stylelint": "^12.0.0",
+    "stylelint-order": "^3.1.1",
+    "stylelint-scss": "^3.13.0",
+    "stylelint-selector-bem-pattern": "^2.1.0"
+  },
+  "dependencies": {},
+  "description": "makeup for django application",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexIGit/makeup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alexIGit/makeup/issues"
+  },
+  "homepage": "https://github.com/alexIGit/makeup#readme"
+}

@@ -1,0 +1,29 @@
+.header {
+  $header_clr__bg: $clr__prim;
+  $header_clr__text: $clr__text--negative;
+  $header_font_family: $font_family--prim;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem; // чтобы не наезжал на leagues
+
+  &--default {
+    background-color: $header_clr__bg;
+  }
+
+  &__title {
+    font-family: $header_font_family;
+    color: $header_clr__text;
+    text-transform: uppercase;
+    height: 100%;
+    align-self: center;
+    text-align: center;
+    flex-basis: 90%;
+    font-size: 2rem;
+  }
+
+  &__nav {
+    margin-bottom: -15px; // для выступа вниз
+  }
+}

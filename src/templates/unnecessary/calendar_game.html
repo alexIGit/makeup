@@ -1,0 +1,54 @@
+<tr class="schedule__game schedule__game--finished">
+    <td class="schedule__league">
+        <img src="./img/icon/@@league" alt="APL" class="icon icon--schedule">
+    </td>
+    <td class="schedule__team schedule__team--home">
+        <!--      todo: max h+w icon svg-->
+        @@include('../element/team.html', {
+        "team": {
+        "class": "team--left",
+        "name": "@@team_away.name",
+        "logo": "@@team_away.logo"
+        }
+        })
+    </td>
+
+    <td class="schedule__date">10:50</td>
+    <td class="schedule__team schedule__team--away">
+        @@include('../element/team.html', {
+        "team": {
+        "class": "team--right",
+        "name": "@@team_home.name",
+        "logo": "@@team_home.logo"
+        }
+        })
+
+    </td>
+</tr>
+
+<tr class="schedule__game schedule__game--default">
+    <td class="schedule__league">
+        <img src="./img/icon/@@league" alt="APL" class="icon icon--schedule">
+    </td>
+    <td class="schedule__team schedule__team--home">
+        <!--      todo: max h+w icon svg-->
+        @@include('../element/team.html', {
+        "team": {
+        "class": "team--left",
+        "name": "@@team_home.name",
+        "logo": "@@team_home.logo"
+        }
+        })
+    </td>
+
+    <td class="schedule__date">10:50</td>
+    <td class="schedule__team schedule__team--away">
+        @@include('../element/team.html', {
+        "team": {
+        "class": "team--right",
+        "name": "@@team_away.name",
+        "logo": "@@team_away.logo"
+        }
+        })
+    </td>
+</tr>

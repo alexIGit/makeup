@@ -1,0 +1,1223 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  @@include('global/head__parse.html')
+</head>
+<body>
+@@include('block/header__parse.html')
+@@include('block/leagues.html')
+
+<main class="main" id="main">
+  <section class="main__item main__item--calendar block block--parsing" id="leagues">
+    @@include('block/calendar.html', {
+    "add_class": "calendar--parse"
+    })
+
+    <table>
+      <tr>
+        <td><input type="checkbox" name="check__league" id="le" class="check__checkbox"></td>
+        <td>
+          <label class="block__element check" for="le">
+            <span class="check__img">
+              <img src="./img/icon/nh_vanco.png" alt="APL">
+            </span>
+          </label>
+        </td>
+        <td><label class="block__element check" for="le"><span>-</span></label></td>
+        <td>
+          <label class="block__element check" for="le">
+            <span class="check__img">
+              <img src="./img/icon/nh_vanco.png" alt="APL">
+            </span>
+          </label>
+        </td>
+        <td><label class="block__element check" for="le"><span class="game_status">перенесен</span></label></td>
+        <td><label class="block__element check" for="le"><span>завершён</span></label></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="check__league" id="apl" class="check__checkbox"></td>
+        <td>
+          <label class="block__element check" for="apl">
+            <span class="check__img">
+              <img src="./img/icon/na_japa.png" alt="APL">
+            </span>
+          </label>
+        </td>
+        <td><label class="block__element check" for="apl"><span>-</span></label></td>
+        <td>
+          <label class="block__element check" for="apl">
+            <span class="check__img">
+              <img src="./img/icon/na_japa.png" alt="APL">
+            </span>
+          </label>
+        </td>
+        <td><label class="block__element check" for="apl"><span class="game_status">перенесен</span></label></td>
+        <td><label class="block__element check" for="apl"><span>закончен</span></label></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="check__league" id="le1" class="check__checkbox"></td>
+        <td>
+          <label class="block__element check" for="le1">
+            <span class="check__img">
+              <img src="./img/icon/nh_vanco.svg" alt="APL">
+            </span>
+          </label>
+        </td>
+        <td><label class="block__element check" for="le1"><span>-</span></label></td>
+        <td>
+          <label class="block__element check" for="le1">
+            <span class="check__img">
+              <img src="./img/icon/nh_vanco.svg" alt="APL">
+            </span>
+          </label>
+        </td>
+        <td><label class="block__element check" for="le1"><span class="game_status"></span></label></td>
+        <td><label class="block__element check" for="le1"><span></span></label></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="check__league" id="le2" class="check__checkbox"></td>
+        <td>
+          <label class="block__element check" for="le2">
+            <span class="check__img">
+              <img src="./img/icon/r_arsen.svg" alt="APL">
+            </span>
+          </label>
+        </td>
+        <td><label class="block__element check" for="le2"><span>-</span></label></td>
+        <td>
+          <label class="block__element check" for="le2">
+            <span class="check__img">
+              <img src="./img/icon/r_arsen.svg" alt="APL">
+            </span>
+          </label>
+        </td>
+        <td><label class="block__element check" for="le2"><span class="game_status"></span></label></td>
+        <td><label class="block__element check" for="le2"><span>закончен</span></label></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="check__league" id="le21" class="check__checkbox"></td>
+        <td>
+          <label class="block__element check" for="le2">
+            <span class="check__img">
+              <img src="./img/icon/r_arsen.svg" alt="APL">
+            </span>
+          </label>
+        </td>
+        <td><label class="block__element check" for="le21"><span>-</span></label></td>
+        <td>
+          <label class="block__element check" for="le2">
+            <span class="check__img">
+              <img src="./img/icon/r_arsen.svg" alt="APL">
+            </span>
+          </label>
+        </td>
+        <td><label class="block__element check" for="le21"><span class="game_status">перенесен</span></label></td>
+        <td><label class="block__element check" for="le21"><span>-</span></label></td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="check__league" id="le23" class="check__checkbox"></td>
+        <td>
+          <label class="block__element check" for="le23">
+            <span class="check__img">
+              <img src="./img/icon/r_arsen.svg" alt="APL">
+            </span>
+          </label>
+        </td>
+        <td><label class="block__element check" for="le23"><span>-</span></label></td>
+        <td>
+          <label class="block__element check" for="le23">
+            <span class="check__img">
+              <img src="./img/icon/r_arsen.svg" alt="APL">
+            </span>
+          </label>
+        </td>
+
+        <td><label class="block__element check" for="le23"><span class="game_status"></span></label></td>
+        <td><label class="block__element check" for="le23"><span>закончен</span></label></td>
+      </tr>
+    </table>
+
+    <button class="btn btn--leagues">Отметить все</button>
+    <button class="btn btn--leagues">Снять всё</button>
+    <button class="btn--add_game">Добавить в выбранные игры</button>
+
+  </section>
+
+  <section class="main__item main__item--h2h block block--parsing block--command" id="checked_games">
+    <h1 class="block__title block__title--default block__element">Игры</h1>
+
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/nh_vanco.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/nh_vanco.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/r_arsen.svg" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+    <section class="game game--box">
+      <section class="check__img">
+        <img src="../img/icon/s_apl.svg" alt="">
+      </section>
+
+      <span class="check__img">
+        <img src="./img/icon/nh_vanco.png" alt="APL">
+      </span>
+
+      <span>05-06-2020</span>
+      <span class="check__img">
+        <img src="./img/icon/nh_vanco.png" alt="APL">
+      </span>
+
+      <button class="game__remove">-</button>
+    </section>
+
+  </section>
+
+  <section class="main__item main__item--h2h block block--parsing block--command" id="commands">
+    <h1 class="block__title block__title--default block__element">Команды</h1>
+    <h2 class="block__element block__description_command">Часто используеммые</h2>
+
+    <input type="radio" name="command" id="upd_games_command" class="inp__command">
+    <label class="btn btn--command" for="upd_games_command">Обновить данные игр</label>
+
+    <input type="radio" name="command" id="upd_date_command" class="inp__command">
+    <label class="btn btn--command" for="upd_date_command">Обновить дату не сыгранных игр</label>
+
+    <h2 class="block__element block__description_command">Только футбол</h2>
+    <input type="radio" name="command"  id="upd_referee_command" class="inp__command" value="upd__referee">
+    <label class="btn btn--command" for="upd_referee_command">Обновить арбитров и даты игр</label>
+
+    <h2 class="block__element block__description_command">Перед сезоном</h2>
+    <input type="radio" name="command" id="add_game_command" class="inp__command">
+    <label class="btn btn--command" for="add_game_command">Добавить игры</label>
+
+
+
+    <h2 class="block__element block__description_parameter">Дополнительные параметры</h2>
+
+    <div class="parameter upd_games_parameter">
+      <select name="parameters" id="selecet" class="btn btn--parameter">
+        <option value="1" selected>Только прошедщие</option>
+        <option value="1">Прошлый месяц</option>
+        <option value="1">Весь сезон</option>
+      </select>
+    </div>
+
+    <div class="parameter upd_date_parameter">Доп. параметров нету</div>
+
+    <div class="parameter  upd_referee_parameter">
+      <select name="parameters" id="1" class="btn btn--parameter">
+        <option value="1">На 1 день вперед</option>
+        <option value="1">На 2 дня вперед</option>
+        <option value="1" selected>На 3 дня вперед</option>
+        <option value="1">На 4 дня вперед</option>
+        <option value="1">На неделю вперёд</option>
+        <option value="1"></option>
+      </select>
+    </div>
+
+    <div class="parameter add_game_parameter">
+      <p class="block__element">Перед запуском, нужно обновить команды</p>
+      <input class="btn--parameter" type="text" name="parameters" id="add_games" placeholder="Сезон: s_19_20">
+    </div>
+
+
+
+    <button class="btn btn--run">Запуск</button>
+
+    <section class="block__blocked block__blocked--hide">
+      <p class="block__element block__description_command">Проверка перед запуском прошла успешно</p>
+      <p>Ожидайте выполнения команды</p>
+    </section>
+  </section>
+
+  <section class="main__item main__item--default block--parsing" id="lastgames">
+    <h1 class="block__title block__title--default block__element">Отчет вывполнения команды</h1>
+  </section>
+</main>
+</body>
+</html>

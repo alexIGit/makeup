@@ -1,0 +1,334 @@
+@import 'settings/variable';
+//@import 'settings/_extends_color';
+@import 'settings/_mixin_responsive';
+//@import 'settings/_mixin_grid';
+//
+@import 'element/icon';
+@import 'element/btn';
+@import 'element/team';
+@import 'element/select';
+@import 'element/preloader';
+//
+@import 'component/nav';
+@import 'component/slider';
+@import 'component/block';
+//@import 'component/schedule';
+//@import 'component/caption';
+//@import 'component/table';
+@import 'component/loggin';
+
+//@import 'component/table_games';
+//
+//@import 'sprite/aspect';
+//
+@import 'layout/header';
+@import 'layout/leagues';
+@import 'layout/main';
+@import 'layout/calendar';
+//@import 'layout/lastgames';
+//@import 'layout/stat';
+//@import 'layout/footer';
+//
+
+.header--parse {
+  position: relative;
+  flex-direction: row;
+  background-color: $clr__prim;
+
+  & .nav__item {
+    height: 25px;
+    min-height: auto;
+    min-width: auto;
+  }
+
+  & a {
+    color: white;
+  }
+
+  & .nav__item--active a {
+    color: $clr__prim;
+  }
+
+  & .nav__item--active a:hover {
+    color: white;
+  }
+}
+
+.block {
+  background-color: inherit;
+
+  &--parsing {
+    border: 3px solid $clr__prim;
+    border-radius: 15px;
+    min-height: 100px;
+    width: 100%;
+    padding: 0;
+    color: $clr__prim;
+    font-weight: $font_family--prim;
+    flex-direction: row;
+    flex-wrap: wrap;
+    z-index: 10;
+  }
+
+  &--command {
+    position: relative;
+  }
+
+  &__sport {
+    font-size: 0.8em;
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  &__description {
+    color: inherit; // заглушка
+
+    &_command {
+      font-size: 0.8em;
+      margin-top: 10px;
+      margin-bottom: 0;
+      padding: 0;
+      text-align: left;
+    }
+
+    &_parameter {
+      font-size: 0.8em;
+      margin-top: 10px;
+      margin-bottom: 0;
+      padding: 0;
+      text-align: left;
+      display: none;
+    }
+  }
+
+  &__element {
+    width: 100%;
+  }
+
+  &__blocked {
+    display: block;
+    background-color: hsla(212, 50%, 50%, 0.5);
+    color: red;
+    position: absolute;
+    z-index: 20;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+
+    &--show {
+      display: block;
+    }
+
+    &--hide {
+      display: none;
+    }
+  }
+}
+
+.check {
+  margin-top: 5px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  //align-content: center;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &__img {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__checkbox {
+    //background-color: red;
+    //border: 2px solid yellow;
+    //display: inline-block;
+    //width: 10px;
+    //height: 10px;
+    margin-right: 10px;
+  }
+}
+
+.btn {
+  //background-color: $clr__prim;
+
+  &--leagues {
+    margin: 0;
+    margin-top: 10px;
+    display: inline-block;
+    width: 50%;
+    border-radius: 15px;
+    color: $clr__prim;
+    background-color: white;
+    border: 3px solid $clr__prim;
+    transition-duration: 0.5s;
+    max-height: 30px;
+
+    &:hover {
+      cursor: pointer;
+      color: white;
+      background-color: $clr__prim;
+      border-color: white;
+    }
+  }
+
+  &--add_game {
+    margin: 0;
+    margin-top: 10px;
+    display: inline-block;
+    width: 100%;
+    border-radius: 15px;
+    color: white;
+    background-color: $clr__prim;
+    border: 3px solid $clr__prim;
+    transition-duration: 0.5s;
+    max-height: 30px;
+    font-family: $font_family--prim;
+    font-weight: bold;
+
+    &:hover {
+      cursor: pointer;
+      color: $clr__prim;
+      background-color: white;
+    }
+  }
+
+  &--command {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 5px;
+    padding: 5px;
+    min-width: 25%;
+    border-radius: 5px;
+    color: $clr__prim;
+    background-color: white;
+    border: 3px solid $clr__prim;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+    height: 25px;
+    line-height: 25px;
+
+    &:hover {
+      cursor: pointer;
+      color: white;
+      background-color: $clr__prim;
+      border-color: white;
+    }
+  }
+
+  &--parameter {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 5px;
+    padding: 5px;
+    min-width: 25%;
+    border-radius: 5px;
+    color: $clr__prim;
+    background-color: white;
+    border: 3px solid $clr__prim;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+    //height: 25px;
+    //line-height: 25px;
+
+    &:hover {
+      cursor: pointer;
+      color: white;
+      background-color: $clr__prim;
+      border-color: white;
+    }
+  }
+
+  &--run {
+    width: 100%;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 5px;
+    min-width: 25%;
+    border-radius: 10px;
+    color: white;
+    background-color: $clr__prim;
+    border: 3px solid $clr__prim;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      color: $clr__prim;
+      background-color: white;
+    }
+  }
+}
+
+.parameter {
+  display: none;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 50px;
+}
+
+.inp__command {
+  display: none;
+}
+
+.inp__command:checked + label {
+  background-color: $clr__prim;
+  color: white;
+}
+
+#upd_games_command:checked ~ .upd_games_parameter,
+#upd_date_command:checked ~ .upd_date_parameter,
+#upd_referee_command:checked ~ .upd_referee_parameter,
+#add_game_command:checked ~ .add_game_parameter {
+  display: block;
+}
+
+.inp__command:checked ~ .block__description_parameter {
+  display: block;
+}
+
+.calendar--parse {
+  width: 100%;
+}
+
+.game {
+  background-color: inherit; // заглушка
+
+  &--box {
+    border: 2px solid $clr__prim;
+    border-radius: 5px;
+    height: 25px;
+    line-height: 25px;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  &__remove {
+    background-color: hsla(0, 75%, 50%, 0.8);
+    //color: hsla(0, 50%, 50%, 1);
+    color: white;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

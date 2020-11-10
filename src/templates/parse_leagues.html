@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  @@include('global/head__parse.html')
+</head>
+<body>
+  @@include('block/header__parse.html')
+
+  <main class="main" id="main">
+    <section class="main__item main__item--calendar block block--parsing" id="leagues">
+      <h1 class="block__title block__title--default block__element">Выбор лиг</h1>
+
+      <label class="block__element check">
+        <input type="checkbox" name="check__sport" id="soccer" class="check__checkbox">
+        <span>Футбол</span>
+      </label>
+
+      <label class="block__element check">
+        <input type="checkbox" name="check__league" id="apl" class="check__checkbox">
+        <span class="check__img">
+          <img src="./img/icon/s_apl.svg" alt="APL">
+        </span>
+        <span>Анлийская Премьер-лига</span>
+      </label>
+      <label class="block__element check">
+        <input type="checkbox" name="check__league" id="le" class="check__checkbox">
+        <span class="check__img">
+          <img src="./img/icon/s_bun.svg" alt="APL">
+        </span>
+        <span>АПЛ</span>
+      </label>
+      <label class="block__element check">
+        <input type="checkbox" name="check__league" id="le1" class="check__checkbox">
+        <span class="check__img">
+          <img src="./img/icon/s_lal.svg" alt="APL">
+        </span>
+        <span>АПЛ</span>
+      </label>
+      <label class="block__element check">
+        <input type="checkbox" name="check__league" id="le2" class="check__checkbox">
+        <span class="check__img">
+          <img src="./img/icon/h_nhl.svg" alt="APL">
+        </span>
+        <span>АПЛ</span>
+      </label>
+      <label class="block__element check">
+        <input type="checkbox" name="check__league" id="le3" class="check__checkbox">
+        <span class="check__img">
+          <img src="./img/icon/s_nat.svg" alt="APL">
+        </span>
+        <span>АПЛ</span>
+      </label>
+
+      <label class="block__element check">
+        <input type="checkbox" name="check__sport" id="soccer12" class="check__checkbox">
+        <span>Хоккей</span>
+      </label>
+      <label class="block__element check">
+        <input type="checkbox" name="check__league" id="le12" class="check__checkbox">
+        <span class="check__img">
+          <img src="./img/icon/h_khl.svg" alt="APL">
+        </span>
+        <span>АПЛ</span>
+      </label>
+      <label class="block__element check">
+        <input type="checkbox" name="check__league" id="le13" class="check__checkbox">
+        <span class="check__img">
+          <img src="./img/icon/s_lc.svg" alt="APL">
+        </span>
+        <span>АПЛ</span>
+      </label>
+
+      <button class="btn btn--leagues">Отметить все</button>
+      <button class="btn btn--leagues">Снять всё</button>
+
+    </section>
+
+    <section class="main__item main__item--h2h block block--parsing block--command" id="commands">
+      <h1 class="block__title block__title--default block__element">Команды</h1>
+      <h2 class="block__element block__description_command">Часто используеммые</h2>
+
+      <input type="radio" name="command" id="upd_games_command" class="inp__command">
+      <label class="btn btn--command" for="upd_games_command">Обновить данные игр</label>
+
+      <input type="radio" name="command" id="upd_date_command" class="inp__command">
+      <label class="btn btn--command" for="upd_date_command">Обновить дату не сыгранных игр</label>
+
+      <h2 class="block__element block__description_command">Только футбол</h2>
+      <input type="radio" name="command"  id="upd_referee_command" class="inp__command" value="upd__referee">
+      <label class="btn btn--command" for="upd_referee_command">Обновить арбитров и даты игр</label>
+
+      <h2 class="block__element block__description_command">Перед сезоном</h2>
+      <input type="radio" name="command" id="add_game_command" class="inp__command">
+      <label class="btn btn--command" for="add_game_command">Добавить игры</label>
+
+
+
+      <h2 class="block__element block__description_parameter">Дополнительные параметры</h2>
+
+      <div class="parameter upd_games_parameter">
+        <select name="parameters" id="selecet" class="btn btn--parameter">
+          <option value="1" selected>Только прошедщие</option>
+          <option value="1">Прошлый месяц</option>
+          <option value="1">Весь сезон</option>
+        </select>
+      </div>
+
+      <div class="parameter upd_date_parameter">Доп. параметров нету</div>
+
+      <div class="parameter  upd_referee_parameter">
+        <select name="parameters" id="1" class="btn btn--parameter">
+          <option value="1">На 1 день вперед</option>
+          <option value="1">На 2 дня вперед</option>
+          <option value="1" selected>На 3 дня вперед</option>
+          <option value="1">На 4 дня вперед</option>
+          <option value="1">На неделю вперёд</option>
+          <option value="1"></option>
+        </select>
+      </div>
+
+      <div class="parameter add_game_parameter">
+        <p class="block__element">Перед запуском, нужно обновить команды</p>
+        <input class="btn--parameter" type="text" name="parameters" id="add_games" placeholder="Сезон: s_19_20">
+      </div>
+
+
+
+      <button class="btn btn--run">Запуск</button>
+
+      <section class="block__blocked block__blocked--hide">
+        <p class="block__element block__description_command">Проверка перед запуском прошла успешно</p>
+        <p>Ожидайте выполнения команды</p>
+      </section>
+    </section>
+
+    <section class="main__item main__item--default block--parsing" id="lastgames">
+      <h1 class="block__title block__title--default block__element">Отчет вывполнения команды</h1>
+    </section>
+  </main>
+</body>
+</html>

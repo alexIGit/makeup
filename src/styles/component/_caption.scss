@@ -1,0 +1,77 @@
+.caption {
+  $caption_clr: $clr__prim;
+  background-color: inherit;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-between;
+
+  &__item {
+    margin-bottom: 1em;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+
+    &--team {
+      margin-top: 0.5em;
+      width: 100%;
+      display: inline-flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      color: $caption_clr;
+      justify-content: center;
+    }
+
+    &--place {
+      flex-grow: 10;
+      flex-shrink: 3;
+      flex-basis: 50%;
+      width: 50%;
+    }
+
+    &--times {
+      flex-grow: 10;
+      flex-shrink: 7;
+      flex-basis: 50%;
+      width: auto;
+    }
+
+    &--stat {
+      width: 100%;
+      color: $caption_clr;
+      text-align: center;
+
+      & h2 {
+        font-size: 1em;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    &--aspect {
+      width: 100%;
+      flex-basis: 100%;
+      //
+      display: inline-flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    // mobile version ниже из-за приоритетов стилей
+    @include tablet--lte {
+      flex-basis: 90%;
+    }
+  }
+
+  &__dash {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__team {
+    flex-basis: 90%;
+  }
+}

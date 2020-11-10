@@ -1,0 +1,33 @@
+<section class="caption">
+    <div class="caption__item caption__item--team">
+        @@include('../element/team.html', {
+        "team": {
+        "class": "team--left caption__team",
+        "name": "Arsenal with very long name",
+        "logo": "r_arsen.svg"
+        }
+        })
+
+        <span class="caption__dash">-</span>
+
+        @@include('../element/team.html', {
+        "team": {
+        "class": "team--right caption__team",
+        "name": "Барселона with very long name",
+        "logo": "s_grana.svg"
+        }
+        })
+    </div>
+
+        @@include('../element/select__place.html', {
+        "add_selected": "1-й",
+        "name": "b2b_place",
+        "add_class": "select--default caption__item caption__item--place"
+        })
+
+
+    @@include('../element/select__times.html', {
+    "name": "b2b_times",
+    "add_class": "caption__item caption__item--times select--default"
+    })
+</section>

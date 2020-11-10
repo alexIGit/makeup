@@ -1,0 +1,19 @@
+.login {
+  //background-color: red;
+
+  &--parse {
+    position: absolute;
+    top: 10%;
+    left: 10px;
+  }
+
+  &__btn {
+    color: white;
+    background-color: $clr__prim;
+    border: 3px solid white;
+    border-radius: 10px;
+    font-family: $font_family--prim;
+    font-weight: bold;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,17 @@
+<section class="caption">
+    <div class="caption__item caption__item--stat">
+        <h2>Средние показатели за матч</h2>
+    </div>
+
+    @@include('../element/select__place.html', {
+    "add_selected": "",
+    "name": "stat_place",
+    "add_class": "select--default caption__item caption__item--place"
+    })
+
+
+    @@include('../element/select__times.html', {
+    "name": "stat_times",
+    "add_class": "caption__item caption__item--times select--default"
+    })
+</section>

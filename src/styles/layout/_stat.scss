@@ -1,0 +1,175 @@
+.stat {
+  $stat_margin_row_head_bottom: 5px;
+  $stat_w_it: 40px;
+  $stat_w_it_response: 50px;
+  $stat_w_team: 150px;
+  $stat_w_team_icon_only: 50px;
+  $stat_h_team_icon_only: 30px;
+  $stat_clr_prim_text: $clr__prim_text;
+  $stat_clr_prim: $clr__prim;
+  $stat_clr_row_even: $clr__prim--hover;
+  $stat_clr_bg: white;
+
+  %stat_sort_cell {
+    position: relative;
+  }
+
+  %stat_sort_arrow {
+    display: block;
+    width: 1px;
+    height: 1px;
+    content: '';
+    border: 4px solid transparent;
+    border-bottom-color: $stat_clr_prim_text;
+    position: absolute;
+    right: 3px;
+  }
+  background-color: inherit;
+
+  &--soccer {
+    background-color: inherit;
+
+    & .stat__row {
+      grid-template-columns: repeat(var(--stat-count_columns-soccer), 1fr);
+    }
+  }
+
+  &--hockey {
+    background-color: inherit;
+
+    & .stat__row {
+      grid-template-columns: repeat(var(--stat-count_columns-hockey), 1fr);
+    }
+  }
+
+  &--basket {
+    background-color: inherit;
+
+    & .stat__row {
+      grid-template-columns: repeat(var(--stat-count_columns-basket), 1fr);
+    }
+  }
+
+  &__content {
+    overflow-x: auto;
+    overflow-y: hidden;
+    //position: relative;
+  }
+
+  &__row {
+    display: grid;
+    // кол-во колонок зависит от вида спорта
+    // переменные вынесены в settings.css
+
+    &--head {
+      grid-template-rows: repeat(2, 1fr);
+    }
+
+    &--team {
+      //background-color: inherit;
+      align-content: center;
+      align-items: center;
+      height: auto;
+      @include screen-small--lte {
+        height: $stat_h_team_icon_only;
+      }
+
+      &:nth-of-type(2n+1) {
+        background-color: $stat_clr_row_even;
+      }
+    }
+
+    &_cell {
+      box-sizing: border-box;
+      text-align: center;
+
+      &--aspect {
+        grid-column: span 3;
+      }
+
+      &--team {
+        grid-column: 1 / span 1;
+        min-width: $stat_w_team;
+        width: auto;
+        text-align: right;
+        @include screen-small--lte {
+          //position: relative;
+          left: 0%;
+          //background-color: lightcoral;
+          display: inline-block;
+          min-width: auto;
+          width: $stat_w_team_icon_only;
+          background-color: $stat_clr_bg;
+          border-right: 1px solid $clr__prim;
+          //background-color: ;
+          //height: 150px;
+        }
+
+        &_head {
+          grid-row: span 2;
+          align-self: end;
+          position: relative;
+        }
+      }
+
+      &--game {
+        grid-column: 2 / span 1;
+        min-width: 60px;
+        margin-left: auto;
+        //@include screen-small--lte {
+        //  min-width: 60px;
+        //}
+
+        &_head {
+          grid-row: 1 / -1;
+          align-self: end;
+          margin-bottom: $stat_margin_row_head_bottom;
+          background-color: $stat_clr_prim;
+        }
+      }
+
+      &--it {
+        min-width: $stat_w_it;
+        @include screen-small--lte {
+          min-width: $stat_w_it_response;
+        }
+
+        &_head {
+          //min-width: $stat_w_it;
+          align-self: end;
+          margin-bottom: $stat_margin_row_head_bottom;
+          background-color: $stat_clr_prim;
+          //grid-column-start: 3;
+        }
+      }
+    }
+  }
+
+  &__sort {
+    color: $stat_clr_prim_text;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    &--sorted {
+      @extend %stat_sort_cell;
+
+      &:after {
+        @extend %stat_sort_arrow;
+        top: 50%;
+        transform: rotate(180deg);
+      }
+    }
+
+    &--reversed {
+      @extend %stat_sort_cell;
+
+      &:after {
+        @extend %stat_sort_arrow;
+        bottom: 50%;
+      }
+    }
+  }
+}

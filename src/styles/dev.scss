@@ -1,0 +1,110 @@
+
+@import 'settings/variable';
+@import 'settings/mixin_responsive';
+
+.development {
+  $dev__clr--prim: $clr__prim;
+  position: fixed;
+  z-index: 5000;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: darksalmon;
+  //opacity: 0.5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  & > span {
+    width: 30px;
+    text-align: center;
+  }
+
+  &__ms { @include mobile-small { background-color: $dev__clr--prim; } }
+  &__ml { @include mobile-large { background-color: $dev__clr--prim; } }
+  &__ts { @include tablet-small { background-color: $dev__clr--prim; } }
+  &__tl { @include tablet-large { background-color: $dev__clr--prim; } }
+  &__ss { @include screen-small { background-color: $dev__clr--prim; } }
+  &__sl { @include screen-large { background-color: $dev__clr--prim; } }
+  &__ll { @include screen-lte { background-color: $dev__clr--prim; } }
+}
+
+.stat1 {
+  background-color: deeppink;
+
+  &__content {
+    background-color: orange;
+  }
+
+  &__aspect {
+    background-color: lightgreen;
+  }
+
+  &__it {
+    background-color: yellow;
+    margin-top: 0.1em;
+  }
+
+  &__teams {
+    background-color: deeppink;
+  }
+
+  &__row {
+    background-color: lightsalmon;
+    margin-top: 0.1em;
+  }
+
+  &__group {
+    background-color: deepskyblue;
+
+    &--team {
+      background-color: lawngreen;
+    }
+  }
+
+  &__cell {
+    background-color: deeppink;
+
+
+  }
+}
+
+.stat__row1 {
+
+
+  &_cell {
+    //background-color: darkcyan;
+
+    &--aspect {
+      background-color: lightsalmon;
+    }
+
+    &--game {
+      //background-color: lightgreen;
+    }
+
+    &--it {
+      background-color: lightskyblue;
+    }
+
+    &--team {
+      //background-color: yellowgreen;
+    }
+
+  }
+}
+
+.table__col--teams {
+  //background-color: lightcoral;
+}
+
+.team--red {
+  //background-color: yellow;
+  //margin: 0;
+  //line-height: 100px;
+}
+
+.table__dash {
+  //background-color: green;
+
+}

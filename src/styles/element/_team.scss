@@ -1,0 +1,112 @@
+.team {
+  $team__color--red: $clr__red_card;
+  $team__color--red_text: white;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+
+  &__red {
+    display: none;
+
+    &--show {
+      display: inline-block;
+      width: 8px;
+      height: 15px;
+      line-height: 15px;
+      background-color: $team__color--red;
+      border-radius: 3px;
+      font-weight: bold;
+      font-size: 12px;
+      color: $team__color--red_text;
+      position: absolute;
+    }
+
+    &--before {
+      left: -6px;
+    }
+
+    &--after {
+      right: -6px;
+    }
+  }
+
+  &__logo {
+    box-sizing: border-box;
+    flex-basis: 10%;
+    min-width: 25px;
+    max-width: 25px;
+    max-height: 25px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 25px;
+  }
+
+  &__name {
+    display: inline;
+    text-align: inherit;
+    box-sizing: border-box;
+    width: 100%;
+    text-transform: capitalize;
+    font-family: inherit;
+    color: inherit;
+  }
+
+  &--left {
+    text-align: right;
+
+    .team__name {
+      order: 0;
+      margin-right: 0.15em;
+    }
+
+    .team__logo {
+      order: 10;
+    }
+  }
+
+  &--right {
+    text-align: left;
+
+    .team__name {
+      order: 10;
+      margin-left: 0.15em;
+    }
+
+    .team__logo {
+      order: 0;
+    }
+  }
+
+  &--logo {
+
+    & > .team__name {
+      display: none;
+    }
+  }
+
+  &--logo_stat {
+    @include screen-small--lte {
+      position: absolute;
+      left: 0;
+      //background-color: darkcyan;
+      height: 25px;
+      margin-top: -12px;
+      background-color: inherit;
+      border-right: 1px solid $clr__prim;
+      box-shadow: $box-shadow--prim;
+    }
+
+    & > .team__name {
+      display: inline;
+      @include screen-small--lte {
+        display: none;
+      }
+    }
+  }
+
+  &--red {
+    position: relative;
+  }
+}

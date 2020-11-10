@@ -1,0 +1,15 @@
+.footer {
+  $footer_clr--bg: $clr__prim;
+  $footer_clr--txt: $clr__active;
+  min-height: 150px;
+  background-color: $footer_clr--bg;
+  color: $footer_clr--txt;
+  //
+  padding: 1em;
+  margin-top: 10px;
+  margin-bottom: -20px;
+  //
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

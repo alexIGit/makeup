@@ -1,0 +1,59 @@
+.main {
+  $main__clr--prim: $clr__prim;
+  $main__ff--prim: $font_family--prim;
+  $grid_vertical: 4;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0;
+  //
+  transition-duration: 0.8s;
+  transition-delay: 0.2s;
+  transition-timing-function: linear;
+  //
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: unset;
+  grid-column-gap: 10px;
+  grid-row-gap: 1em;
+  grid-auto-flow: row dense;
+
+  &__item {
+    background-color: inherit; // html-inspector
+
+    &--default {
+      grid-column: 1 / -1;
+    }
+
+    &--calendar {
+      grid-column: 1 / span $grid_vertical;
+      grid-row: 1;
+      padding-left: 5px;
+      box-sizing: border-box;
+      width: auto;
+      @include screen-small--lte {
+        grid-column: 1 / -1;
+      }
+      //@include screen-small {
+      //  grid-column: 2 / -2;
+      //}
+      //@include tablet--lte {
+      //  grid-column: 1 / -1;
+      //}
+    }
+
+    &--h2h {
+      grid-column: #{$grid_vertical + 1} / -1;
+      @include screen-small--lte {
+        grid-column: 1 / -1;
+      }
+    }
+
+    &--referee {
+      grid-column: #{$grid_vertical + 1} / -1;
+      @include screen-small--lte {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+}

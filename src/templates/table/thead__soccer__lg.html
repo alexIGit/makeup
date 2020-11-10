@@ -1,0 +1,104 @@
+<!--<tr>-->
+<!--    <th class="table__col table__col&#45;&#45;league"></th>-->
+<!--    <th class="table__col table__col&#45;&#45;note"></th>-->
+<!--    <th class="table__col table__col&#45;&#45;date"><span title="Дата" class="aspect aspect&#45;&#45;date"></span></th>-->
+<!--    <th class="table__col table__col&#45;&#45;teams"></th>-->
+<!--    <th class="table__col table__col&#45;&#45;result"><span title="Результат" class="aspect aspect&#45;&#45;score"></span></th>-->
+<!--    <th class="table__col table__col&#45;&#45;result"><span title="Угловые"  class="aspect aspect&#45;&#45;corners"></span></th>-->
+<!--    <th class="table__col table__col&#45;&#45;result"><span title="Удары"  class="aspect aspect&#45;&#45;shots"></span></th>-->
+<!--    <th class="table__col table__col&#45;&#45;result"><span title="Удары в створ"  class="aspect aspect&#45;&#45;target"></span></th>-->
+<!--    <th class="table__col table__col&#45;&#45;result"><span title="Желтые карточки"  class="aspect aspect&#45;&#45;cards"></span></th>-->
+<!--    <th class="table__col table__col&#45;&#45;result"><span title="Вбрасывания"  class="aspect aspect&#45;&#45;throw"></span></th>-->
+<!--    <th class="table__col table__col&#45;&#45;result"><span title="Офсайды"  class="aspect aspect&#45;&#45;offsides"></span></th>-->
+<!--    <th class="table__col table__col&#45;&#45;result"><span title="Фолы"  class="aspect aspect&#45;&#45;falls"></span></th>-->
+<!--    <th-->
+<!--            class="table__col table__col&#45;&#45;extended"><span title="Владение мячом, %"-->
+<!--                                                          class="aspect aspect&#45;&#45;possession"></span></th>-->
+<!--</tr>-->
+
+<tr>
+  <th class="table__col table__col--league"></th>
+  <th class="table__col table__col--note"></th>
+  <th class="table__col table__col--date">
+    @@include('../element/aspect.html',{
+    "addClass": "aspect",
+    "img": "date",
+    "name": "Дата",
+    "tooltipeposition": "right"
+    })
+  </th>
+  <th class="table__col table__col--teams"></th>
+  <th class="table__col table__col--result">
+    @@include('../element/aspect.html',{
+    "addClass": "aspect",
+    "img": "score",
+    "name": "Результат",
+    "tooltipeposition": "left"
+    })
+  </th>
+  <th class="table__col table__col--result">
+    @@include('../element/aspect.html',{
+    "addClass": "aspect",
+    "img": "corners",
+    "name": "Угловые",
+    "tooltipeposition": "right"
+    })
+  </th>
+  <th class="table__col table__col--result">
+    @@include('../element/aspect.html',{
+    "addClass": "aspect",
+    "img": "shots",
+    "name": "Удары",
+    "tooltipeposition": "right"
+    })
+  </th>
+  <th class="table__col table__col--result">
+    @@include('../element/aspect.html',{
+    "addClass": "aspect",
+    "img": "target",
+    "name": "Удары в створ",
+    "tooltipeposition": "right"
+    })
+  </th>
+  <th class="table__col table__col--result">@@include('../element/aspect.html',{
+    "addClass": "aspect",
+    "img": "cards",
+    "name": "Желтые карточки",
+    "tooltipeposition": "right"
+    })
+  </th>
+  <th class="table__col table__col--result">
+    @@include('../element/aspect.html',{
+    "addClass": "aspect",
+    "img": "throw",
+    "name": "Вбрасывания",
+    "tooltipeposition": "right"
+    })
+  </th>
+  <th class="table__col table__col--result">
+    @@include('../element/aspect.html',{
+    "addClass": "aspect",
+    "img": "offsides",
+    "name": "Офсайды",
+    "tooltipeposition": "right"
+    })
+  </th>
+  <th class="table__col table__col--result">
+    @@include('../element/aspect.html',{
+    "addClass": "aspect",
+    "img": "falls",
+    "name": "Фолы",
+    "tooltipeposition": "left"
+    })
+  </th>
+  <th class="table__col table__col--extended">
+    @@include('../element/aspect.html',{
+    "addClass": "aspect",
+    "img": "possession",
+    "name": "Владение мячом, %",
+    "tooltipeposition": "left"
+    })
+  </th>
+</tr>
+
+

@@ -1,0 +1,34 @@
+$btn__ff--prim: $font_family--prim;
+$btn__clr--prim: $clr--prim;
+$btn__clr--negative: $clr--negative;
+
+%btn--hover {
+  cursor: pointer;
+  background-color: lighten($btn__clr--prim, 10%);
+  border-color: lighten($btn__clr--prim, 10%);
+}
+
+%btn--default {
+  background-color: $btn__clr--prim;
+  color: $btn__clr--negative;
+}
+
+%btn--active {
+  background-color: $btn__clr--negative;
+  color: $btn__clr--prim;
+}
+
+.btn {
+  //min-width: 30px;
+  font-family: inherit; // from .block
+  text-align: center;
+
+  //text-transform: uppercase;
+  font-weight: bold;
+  outline: none;
+
+  &--default {
+    @extend %btn--default;
+    border: 3px solid $btn__clr--prim;
+  }
+}

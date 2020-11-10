@@ -1,0 +1,70 @@
+<section class="lastgames__content block--table block--preloader">
+    <h2 class="lastgames__content_title">
+        @@include('../element/team.html', {
+        "team": {
+        "class": "team--right",
+        "logo": "s_realm.svg",
+        "name": "Arsenal"
+        }
+        })
+    </h2>
+
+    @@include('../element/select__leagues.html', {
+    "name": "lg_leagues",
+    "add_class": "select--leagues select--lastgames lastgames__content_select"
+    })
+
+    @@include('../element/select__place.html', {
+    "add_selected": "",
+    "name": "lg_place",
+    "add_class": "select--lastgames lastgames__content_select"
+    })
+
+    <section class="block__content">
+        <table class="table table--default table--games">
+            <thead>
+            @@include('../table/thead__soccer__lg.html')
+            </thead>
+            <tbody>
+            @@include('../table/tr__lg.html', {
+            "homelogo": "nh_washi.png",
+            "home": "Arsenal",
+            "awaylogo": "nh_vanco.svg",
+            "away": "Liverpooooooool"
+            })
+
+            @@include('../table/tr__lg.html', {
+            "homelogo": "nh_washi.png",
+            "home": "Arsenal",
+            "awaylogo": "nh_vanco.svg",
+            "away": "Liverpooooooool"
+            })
+
+            @@include('../table/tr__lg.html', {
+            "homelogo": "nh_washi.png",
+            "home": "Arsenal",
+            "awaylogo": "nh_vanco.svg",
+            "away": "Liverpooooooool"
+            })
+
+            @@include('../table/tr__lg.html', {
+            "homelogo": "nh_washi.png",
+            "home": "Arsenal",
+            "awaylogo": "nh_vanco.svg",
+            "away": "Liverpooooooool"
+            })
+
+            @@include('../table/tr__lg.html', {
+            "homelogo": "nh_washi.png",
+            "home": "Arsenal",
+            "awaylogo": "nh_vanco.svg",
+            "away": "Liverpooooooool"
+            })
+            </tbody>
+        </table>
+    </section>
+
+  @@include('../element/preloader.html', {
+  "add__class": "preloader--lg"
+  })
+</section>

@@ -1,0 +1,108 @@
+<section class="block__content">
+    <h2 class="block__title block__title--sub">Арбитр:
+        <a class="block__link block__link--default" href="referee.html" target="_blank">М.   ДинСДлиннымИменем</a></h2>
+<table class="table table--default table--referee" id="referee__table">
+    <thead>
+    <tr>
+        <td colspan="5">Текущий сезон</td>
+        <td colspan="4">Статистика желтых карт в среднем за игру по сезонам</td>
+    </tr>
+<!--    <tr>-->
+<!--        <th class="table__col table__col&#45;&#45;time"></th>-->
+<!--        <th>Игры</th>-->
+<!--        <th>-->
+<!--            <span title="В среднем фолов за игру" class="aspect aspect&#45;&#45;falls"></span>-->
+<!--        </th>-->
+<!--        <th>-->
+<!--            <span title="Общее количество красных карточек" class="aspect aspect&#45;&#45;cards_red"></span>-->
+<!--        </th>-->
+<!--        <th class="border__thick&#45;&#45;right">-->
+<!--            <span title="Общее количество желтых карточек" class="aspect aspect&#45;&#45;cards"></span>-->
+<!--        </th>-->
+<!--        <th class="table__col table__col&#45;&#45;seasson">2016-17</th>-->
+<!--        <th class="table__col table__col&#45;&#45;seasson">2017-18</th>-->
+<!--        <th class="table__col table__col&#45;&#45;seasson">2018-19</th>-->
+<!--        <th class="table__col table__col&#45;&#45;seasson">2019-20</th>-->
+<!--    </tr>-->
+
+    <tr>
+      <th class="table__col table__col--time"></th>
+      <th>Игры</th>
+      <th>
+        @@include('../element/aspect.html',{
+        "addClass": "aspect",
+        "img": "falls",
+        "name": "В среднем фолов за игру",
+        "tooltipeposition": "top"
+        })
+      </th>
+      <th>
+        @@include('../element/aspect.html',{
+        "addClass": "aspect",
+        "img": "cards_red",
+        "name": "Общее количество красных карточек",
+        "tooltipeposition": "left"
+        })
+      </th>
+      <th class="border__thick--right">
+        @@include('../element/aspect.html',{
+        "addClass": "aspect",
+        "img": "cards",
+        "name": "Общее количество желтых карточек",
+        "tooltipeposition": "left"
+        })
+      </th>
+      <th class="table__col table__col--seasson">2016-17</th>
+      <th class="table__col table__col--seasson">2017-18</th>
+      <th class="table__col table__col--seasson">2018-19</th>
+      <th class="table__col table__col--seasson">2019-20</th>
+    </tr>
+
+
+    </thead>
+    <tbody>
+    <tr >
+        <td>Матч</td>
+<!--        <td rowspan="3">30</td>-->
+        <td></td>
+
+        <td>55.5</td>
+        <td>5</td>
+        <td class="border__thick--right">90</td>
+        <td class="table__col table__col--seasson">3.2</td>
+        <td class="table__col table__col--seasson">4.5</td>
+        <td class="table__col table__col--seasson">4.5</td>
+        <td class="table__col table__col--seasson">4.5</td>
+    </tr>
+    <tr >
+        <td>1 тайм</td>
+        <td>30</td>
+        <td>55.5</td>
+        <td>5</td>
+        <td class="border__thick--right">90</td>
+        <td class="table__col table__col--seasson">3.2</td>
+        <td class="table__col table__col--seasson">4.5</td>
+        <td class="table__col table__col--seasson">4.5</td>
+        <td class="table__col table__col--seasson">4.5</td>
+    </tr>
+    <tr >
+        <td>2 тайм</td>
+        <td></td>
+        <td>55.5</td>
+        <td>5</td>
+        <td class="border__thick--right">90</td>
+        <td class="table__col table__col--seasson">3.2</td>
+        <td class="table__col table__col--seasson">4.5</td>
+        <td class="table__col table__col--seasson">4.5</td>
+        <td class="table__col table__col--seasson">4.5</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="9">
+            * статистика арбитра только для текущей лиги
+        </td>
+    </tr>
+    </tfoot>
+</table>
+</section>

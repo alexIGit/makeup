@@ -1,0 +1,13 @@
+@import 'settings/variable';
+@import 'settings/_mixin_responsive';
+//
+@import 'component/nav';
+//
+@import 'layout/header';
+
+.main_404 {
+  padding-top: 2em;
+  background-color: white;
+  text-align: center;
+  color: $clr__prim;
+}
